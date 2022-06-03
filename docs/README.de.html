@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Only change this file if there is no way to include it via config! -->
+<html>
+  <head>
+    <title>README.de.md</title>
+    <script src=":autodocs/script.js"></script>
+    <link rel="stylesheet" href=":autodocs/style.css" />
+    <link rel="icon" href="sources/favicon-96x96.png" /><script>themes = {"dark": "sources/themes/dark.css", "light": "sources/themes/light.css"};</script><script>default_theme = "dark";</script><script>apply_theme()</script>
+  </head>
+  <body>
+    <p><a href="https://github.com/J0J0HA/test/actions/workflows/pages/pages-build-deployment" rel="nofollow"><img alt="pages-build-deployment" data-canonical-src="https://github.com/J0J0HA/test/actions/workflows/pages/pages-build-deployment/badge.svg" src="https://github.com/J0J0HA/test/actions/workflows/pages/pages-build-deployment/badge.svg" style="max-width:100%;"/></a></p>
+<h1>
+<a aria-hidden="true" class="anchor" href="#autodocs" id="autodocs"><span aria-hidden="true" class="octicon octicon-link"></span></a>AutoDocs</h1>
+<p>AutoDocs konvertiert ausgewählte <code>.md</code>-Dateien zu <code>.html</code>-Dateien und überträgt sie zusammen mit anderen ausgewählten Dateien in den /docs ordner von GitHub Pages.</p>
+<h2>
+<a aria-hidden="true" class="anchor" href="#beispiel" id="beispiel"><span aria-hidden="true" class="octicon octicon-link"></span></a>Beispiel</h2>
+<p>Dieses Repository enthält selbst den Workflow für AutoDocs.<br />
+<a href="https://j0j0ha.github.io/AutoDocs/README.de" rel="nofollow">Hier</a> kannst du die automatisch generierte <code>.html</code>-Datei online sehen.<br />
+<a href="https://j0j0ha.github.io/AutoDocs/README.en" rel="nofollow">Hier</a> findest du auch die automatisch generierte <code>.html</code>-Datei der englischen Version.</p>
+<h2>
+<a aria-hidden="true" class="anchor" href="#setup" id="setup"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup</h2>
+<ul>
+<li>
+Kopiere die Ordner <code>/autodocs</code> und <code>/sources</code> und die Datei <code>/.github/workflows/AutoDocs.yml</code> in dein eigenes Repository.</li>
+<li>
+Gehe in den Einstellungen deines Repositorys auf &quot;Pages&quot;, und wähle unter &quot;Source&quot; &quot;main&quot; und &quot;/docs&quot; aus. Klicke anschließend auf &quot;Save&quot;</li>
+<li>
+Gehe nun in den Order <code>/autodocs</code> und bearbeite <code>config.yml</code> (siehe &quot;Konfiguration&quot; unten)</li>
+<li>
+Anschließend werden die Dateien unter <code>files:</code> in den (neu erstellten) Ordner /docs kopiert. <code>.md</code>-Dateien werden einmal als <code>.html</code>, einmal als <code>.md</code> gespeichert, falls du beabsichtigst, eine <code>.md</code>-Datei zum Download anzubieten (oder so).</li>
+<li>
+Durch den push sollte sich die GitHub Page von selbst anpassen. (evtl. Musst du den Cache deinen Browsers löschen und einige Minuten warten.)</li>
+</ul>
+<h2>
+<a aria-hidden="true" class="anchor" href="#konfiguration" id="konfiguration"><span aria-hidden="true" class="octicon octicon-link"></span></a>Konfiguration</h2>
+<p>Datei <code>config.yml</code>:</p>
+<pre><code>index: README.md                               # The md file to be shown at /  (optional)
+scripts:                                       # list of js files to load      (optional)
+  - sources/script.js
+style:                                         # Container for styling         (optional)
+  favicon: sources/favicon.png                 # Link to the favicon           (optional)
+  load:                                        # list of css files to load     (optional)
+    - sources/style.css                        
+  themes:                                      # list of themes (name: link)   (optional)
+    dark: sources/themes/dark.css
+    light: sources/themes/light.css
+  default theme: dark                          # default theme                 (optional)
+folders:                                       # folders to create in docs     (required)
+  - sources                                    # IMPORTANT: Lower level folders first
+  - sources/themes
+files:                                         # files to be included in /docs (required)
+  - README.md                                  # You can use &quot;*&quot; for all files in the folder
+  - README.de.md                               # or &quot;**&quot; for all sub folders and the files
+  - README.en.md                               # tey conatin (recursive)
+  - sources/**
+</code></pre><p>Datei <code>template.html</code>:</p>
+<blockquote>
+<p>Diese Datei wird als Grundlage für die einzelnen Seiten genutzt. %extra% ist der generierte Zusatz durch <code>style</code> in der <code>config.yml</code>, %title% ist der Dateipfad und %content% ist der generierte HTML-Code selbst.</p>
+</blockquote>
+
+  </body>
+</html>

@@ -1,0 +1,12 @@
+:root {
+  background-color:#1c1c1c;
+  color: #bfbfbf;
+}
+
+table, td, th {
+  border-color: #bfbfbf;
+}
+
+code, pre {
+  background-color: #3d3d3d;
+}

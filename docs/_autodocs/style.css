@@ -1,0 +1,37 @@
+/* Please don't cange this file. To implement custom css, use config! */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+	font-family: Robito, Arial, sans-serif, monospace;
+	line-height: 135% !important;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0px 0px;
+}
+
+td, th {
+	margin: 0px;
+	padding: 3px;
+	border: 1px solid black;
+}
+
+th {
+	text-align: left;
+}
+
+pre, code {
+	border-radius: 5px;
+	background-color: #b5b2b1;
+	line-height: 135% !important;
+	display: inline-block;
+	padding: 2px;
+}
+
+pre {
+	width: 97%;
+	margin-left: 1.75%;
+	margin-right: 1.75%;
+}
