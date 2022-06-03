@@ -1,3 +1,7 @@
 index: README.md
+style:
+  themes:
+    dark: source/dark.css
+  default theme: dark
 files:
   - README.md
