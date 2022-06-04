@@ -4,7 +4,7 @@
 
 :root {
 	font-family: Robito, Arial, sans-serif, monospace;
-	line-height: 135% !important;
+	line-height: 135%;
 }
 
 table {
@@ -25,13 +25,20 @@ th {
 pre, code {
 	border-radius: 5px;
 	background-color: #b5b2b1;
-	line-height: 135% !important;
+	line-height: 135%;
 	display: inline-block;
 	padding: 2px;
 }
 
 pre {
-	width: 97%;
-	margin-left: 1.75%;
-	margin-right: 1.75%;
+	width: 99%;
+	margin-left: .5%;
+	overflow-x: auto;
+}
+
+blockquote {
+	background: #e1e1e1;
+	border-left: 3px solid #bfbfbf;
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
 }
