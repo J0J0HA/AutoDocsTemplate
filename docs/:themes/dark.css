@@ -1,5 +1,5 @@
 :root {
-  background-color:#1c1c1c;
+  background-color: #1c1c1c;
   color: #bfbfbf;
 }
 
@@ -9,4 +9,9 @@ table, td, th {
 
 code, pre {
   background-color: #3d3d3d;
+}
+
+blockquote {
+  border-color: #bfbfbf;
+  background-color: #242424;
 }

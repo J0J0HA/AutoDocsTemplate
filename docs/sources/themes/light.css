@@ -1,9 +1,17 @@
 :root {
-	background-color: #e3e3e3;
-	color: #1c1c1c;
+  background-color: #e3e3e3;
+  color: #1c1c1c;
 }
 
 table, td, th {
-	border-color: #1c1c1c;
+  border-color: #1c1c1c;
 }
 
+code, pre {
+  background-color: #a2a2a2;
+}
+
+blockquote {
+  border-color: #aeaeae;
+  background-color: #bfbfbf;
+}
