@@ -42,9 +42,10 @@ if "folders" in config:
 if config["include"]["original-markdown"] is True:
     os.mkdir("../docs/:markdown")
     print(f" -> Created additional folder '../docs/:markdown'.")
-    for folder in config["folders"]:
-        os.mkdir("../docs/:markdown/" + folder)
-        print(f" -> Created additional folder '../docs/:markdown/{folder}'.")
+    if "folders" in config:
+        for folder in config["folders"]:
+            os.mkdir("../docs/" + folder)
+            print(f" -> Created additional folder '{folder}'.")
 # configure default data etc.
 print(" -> Implementing additional features...")
 extra = ''
