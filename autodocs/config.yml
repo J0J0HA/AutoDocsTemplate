@@ -4,4 +4,4 @@ include:
 style:
   default-theme: dark
 files:
-  - **.md
+  - '**.md'
