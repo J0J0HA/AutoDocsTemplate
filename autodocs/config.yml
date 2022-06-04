@@ -2,16 +2,6 @@ index: README.md
 include:
   original-markdown: true
 style:
-  favicon: sources/favicon-96x96.png
-  extra-themes:
-    light: sources/themes/light.css
   default-theme: dark
-folders:
-  - sources
-  - sources/themes
 files:
-  - example.md
-  - README.md
-  - README.de.md
-  - README.en.md
-  - sources/**
+  - **.md
