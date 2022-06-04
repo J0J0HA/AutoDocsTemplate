@@ -34,9 +34,10 @@ with open("config.yml", "r") as file:
 
 
 # create required folders
-for folder in config["folders"]:
-    os.mkdir("../docs/" + folder)
-    print(f" -> Created additional folder '{folder}'.")
+if "folders" in config:
+    for folder in config["folders"]:
+        os.mkdir("../docs/" + folder)
+        print(f" -> Created additional folder '{folder}'.")
 
 if config["include"]["original-markdown"] is True:
     os.mkdir("../docs/:markdown")
