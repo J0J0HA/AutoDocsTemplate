@@ -1,3 +1,12 @@
+
+
+# Discontinued!
+**This project is either finished or discontinued!**  
+This project is still supported. You may create issues if you encounter errors. Feature request are unlikely to be included.
+
+
+
+
 # AutoDocsTemplate  
 Read at [AutoDocs](https://j0j0ha.github.io/AutoDocs/)!  
 If you are in the J0J0HA/AutoDocsTemplate repository, read at the page linked above.   
